@@ -28,20 +28,19 @@
   <div id="dashboard">
     <div class="slick-it">
       <div class="slick-void"></div>
-      <div class="slick-gc" data-title="Personal Advancement">
-          <div data-title="Personal Advancement"><div class="core" data-title="Personal Advancement" data-link="https://danmaxwel22.github.io/gcb-house/personal-advancement/" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://s13.gifyu.com/images/Sj6Zx.png');"><span>Personal Advancement</span></div></div>
-          <div data-title="Chat GPT"><div class="core" data-link="https://chat.openai.com/chat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://s13.gifyu.com/images/Sj6vs.png');"><span>Chat GPT</span></div></div>
-          <div data-title="Lingo Blocks"><div class="core" data-link="https://www.lingoblocks.com/playground/gOwokDW2uFpJ2s1wtOzO" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://s13.gifyu.com/images/Sj6mY.png');"><span>Lingo Blocks</span></div></div>
-          <div data-title="Sucuri"><div class="core" data-link="https://sitecheck.sucuri.net/" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(167, 122, 122, 0.1)), url('https://s13.gifyu.com/images/Sj6k8.png');"><span>Sucuri</span></div></div>
-          <div data-title="Web Archive"><div class="core" data-link="https://web.archive.org/" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://s13.gifyu.com/images/Sj6vO.png');"><span>Web Archive</span></div></div>
-          <div data-title="Grammarly"><div class="core" data-link="https://app.grammarly.com/" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://s13.gifyu.com/images/Sj6mC.png');"><span>Grammarly</span></div></div>
-          <div data-title="I Ask Ai"><div class="core" data-link="https://iask.ai/" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://s5.gifyu.com/images/SjMkh.webp');"><span>I Ask Ai</span></div></div>
-          <div data-title="Flawless Ai"><div class="core" data-link="https://flawlessly.ai/app" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://s13.gifyu.com/images/Sj6k0.png');"><span>Flawless Ai</span></div></div>
-          <div data-title="Hotpot Ai"><div class="core" data-link="https://hotpot.ai/" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://s13.gifyu.com/images/Sj6fs.png');"><span>Hotpot Ai</span></div></div>
-          <div data-title="Craiyon"><div class="core" data-link="https://www.craiyon.com/" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://s13.gifyu.com/images/Sj6tf.png');"><span>Craiyon</span></div></div>
-        </div>   
+      <div class="slick-gc" data-title="Personal Advancement"></div>   
       <div class="slick-void"></div> 
     </div>
+
+    <div class="fab-container">
+      <div class="fab shadow">
+        <div class="fab-content">
+          <!-- <img src="https://s5.gifyu.com/images/SiH8j.png" alt="gclogo"> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" stroke="#5d79d3" viewBox="0 0 45 45"><g fill="none" fill-rule="evenodd" stroke-width="2" transform="translate(1 1)"><circle cx="22" cy="22" r="6" stroke-opacity="0"><animate attributeName="r" begin="1.5s" calcMode="linear" dur="3s" repeatCount="indefinite" values="6;22"/><animate attributeName="stroke-opacity" begin="1.5s" calcMode="linear" dur="3s" repeatCount="indefinite" values="1;0"/><animate attributeName="stroke-width" begin="1.5s" calcMode="linear" dur="3s" repeatCount="indefinite" values="2;0"/></circle><circle cx="22" cy="22" r="6" stroke-opacity="0"><animate attributeName="r" begin="3s" calcMode="linear" dur="3s" repeatCount="indefinite" values="6;22"/><animate attributeName="stroke-opacity" begin="3s" calcMode="linear" dur="3s" repeatCount="indefinite" values="1;0"/><animate attributeName="stroke-width" begin="3s" calcMode="linear" dur="3s" repeatCount="indefinite" values="2;0"/></circle><circle cx="22" cy="22" r="8"><animate attributeName="r" begin="0s" calcMode="linear" dur="1.5s" repeatCount="indefinite" values="6;1;2;3;4;5;6"/></circle></g></svg>
+        </div>
+      </div>
+    </div>
+    
     <ul class="circles">
       <li></li>
       <li></li>
@@ -54,6 +53,7 @@
       <li></li>
       <li></li>
     </ul>
+
     <div class="modal fade" id="portalModal" tabindex="-1">
       <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
@@ -73,18 +73,54 @@
         </div>
       </div>
     </div>
+
+    <div class="modal" tabindex="-1" id="sitesmodal">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            
+            <div class="input-group">
+              <ul class="nav" id="sitesmodalnav">
+                <li class="nav-item">
+                  <a class="nav-link active all">All</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link gen">General</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dev">For Developers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link des">For Designers</a>
+                </li>
+              </ul>
+              <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container d-flex align-items-center flex-wrap" id="gallerySites"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  
 
     <!-- Preloader -->
-	<div class="loader">
-		<div class="spinner-border text-light" role="status">
-			<span class="sr-only">Loading...</span>
-		</div>
-	</div>
-	
-	<!-- Loader -->
-	<div class="loader-overlay"></div>
-    <!-- End Content-->
+<div class="loader">
+  <div class="spinner-border text-light" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<!-- Loader -->
+<div class="loader-overlay"></div>
+  <!-- End Content-->
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -93,6 +129,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
 
     <script src="main.js"></script>
 </body>
