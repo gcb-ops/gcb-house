@@ -32,7 +32,7 @@ function loadLibraries(index) {
 
         function sheetReader(core) {
             return new Promise((resolve, reject) => {
-                fetch('assets/sites.xlsx')
+                fetch('sites.xlsx')
                     .then(response => response.blob())
                     .then(data => {
                     var reader = new FileReader();
