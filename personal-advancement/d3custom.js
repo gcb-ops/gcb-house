@@ -650,7 +650,8 @@ function loadLibraries(index) {
                 }).attr('height', BAR_HEIGHT).transition().duration(ANIM_DURATION).delay(function(d, i) {
                   return i * 100;
                 }).attr('width', function(d) {
-                  return xScale(d.value);
+                  return (d.value * oW) / 100;
+                // return xScale(d.value);
                 });
                 g.select('line').attr('y1', function(d, i) {
                   return yScale(i);
@@ -700,7 +701,8 @@ function loadLibraries(index) {
                 g.select('.bar').transition().duration(ANIM_DURATION).delay(function(d, i) {
                   return i * 100;
                 }).attr('width', function(d) {
-                  return xScale(d.value);
+                  return (d.value * oW) / 100;
+                // return xScale(d.value);
                 }).attr('fill', function(d, i) {
                   return COLORS[i];
                 });
