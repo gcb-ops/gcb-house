@@ -209,6 +209,14 @@ function loadLibraries(index) {
                       $svg = $('<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>').appendTo($this)
                     }
 
+                    var mediaQuery = window.matchMedia("(max-width: 425px)");
+                    if (mediaQuery.matches) {
+                        // Adjust the size of the chart for small screens
+                        var newSize = Math.min(window.innerWidth, window.innerHeight) * 0.8; // Adjust the factor as needed
+                        $svg.attr("width", newSize);
+                        $svg.attr("height", newSize);
+                    }
+
                     var $paths = [],
                         easingFunction = animationOptions[settings.animationEasing],
                         doughnutRadius = Min([H / 2,W / 2]) - settings.edgeOffset,
@@ -238,13 +246,21 @@ function loadLibraries(index) {
                     
                     if($(".chart .doughnutSummary").length < 1) {
                       var summarySize = (cutoutRadius - (doughnutRadius - cutoutRadius)) * 2;
+                      var ml = -(summarySize / 2);
+                      var mt = -(summarySize / 2);
+                      if (mediaQuery.matches) {
+                        // Adjust the size of the summary section for small screens
+                        var newSize = Math.min(window.innerWidth, window.innerHeight) * 0.6;
+                        summarySize = newSize;
+                        ml = -(summarySize / 2) - 15;
+                      }
                       var $summary = $('<div class="' + settings.summaryClass + '" />')
                               .appendTo($this)
                               .css({ 
                                 width: summarySize + "px",
                                 height: summarySize + "px",
-                                "margin-left": -(summarySize / 2) + "px",
-                                "margin-top": -(summarySize / 2) + "px"
+                                "margin-left": ml + "px",
+                                "margin-top": mt + "px"
                               });
                         }
                     var $summaryTitle = $('<p class="' + settings.summaryTitleClass + '">' + settings.summaryTitle + '</p>').appendTo($summary);
@@ -574,7 +590,8 @@ function loadLibraries(index) {
               }).on('click', highlight).transition().duration(ANIM_DURATION).delay(function(d, i) {
                 return i * 100;
               }).attr('width', function(d) {
-                return xScale(d.value);
+                return (d.value * oW) / 100;
+                // return xScale(d.value);
               });
               container.append('line').style('stroke', '#767676').style('fill', 'none').style('stroke-width', '1px').attr('x1', 0).attr('y1', function(d, i) {
                 return yScale(i);
