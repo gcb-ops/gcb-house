@@ -408,7 +408,9 @@ function loadLibraries(index) {
                     $(document).on('mouseover', '#fprint-btn', function() {
                     setTimeout(function() {
                         $('.modal .btn').attr({href: link, target: '_blank'})
-                        window.open(link, '_blank');
+                        console.log(link)
+                        console.log($('.slick-center').data("link"))
+                        //window.open(link, '_blank');
                     }, 1500)
                     });
                 }) 
