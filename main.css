@@ -3427,9 +3427,9 @@ svg.horizontal-bar {
 #home {
 	overflow: hidden;
 }
-
+/* https://s13.gifyu.com/images/SjWHc.jpg */
 #dashboard {
-	background: url('https://s13.gifyu.com/images/SjWHc.jpg');
+	background: url('img/flawlessAi.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

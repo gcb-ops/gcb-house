@@ -409,8 +409,8 @@ function loadLibraries(index) {
                     setTimeout(function() {
                         $('.modal .btn').attr({href: link, target: '_blank'})
                         console.log(link)
-                        console.log($('.slick-center').data("link"))
-                        //window.open(link, '_blank');
+                        console.log($('.slick-center .core').data("link"))
+                        window.open($('.slick-center .core').data("link"), '_blank');
                     }, 1500)
                     });
                 }) 
