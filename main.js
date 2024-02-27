@@ -408,8 +408,6 @@ function loadLibraries(index) {
                     $(document).on('mouseover', '#fprint-btn', function() {
                     setTimeout(function() {
                         $('.modal .btn').attr({href: link, target: '_blank'})
-                        console.log(link)
-                        console.log($('.slick-center .core').data("link"))
                         window.open($('.slick-center .core').data("link"), '_blank');
                     }, 1500)
                     });
