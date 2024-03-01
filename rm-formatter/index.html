@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCB Report Generator</title>
+
+    <!-- css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="report.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body class="dark--theme">
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/lrf-GAYUOkQ? &controls=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+    <!-- toast -->
+    <div aria-live="polite" aria-atomic="true">
+
+      <div class="toast-container me-5 position-absolute p-3 bottom-0 end-0">
+
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header text-white">  
+            <strong class="me-auto">NOTIFICATION</strong>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body bg-white">
+
+            <div class="toast-item mb-4">
+              <p>&#x2609; Download <a target="_blank" href="https://chromewebstore.google.com/detail/grammarly-ai-writing-and/kbfnbcaeplbcioakkpcpgfkobkghlhen">Grammarly Desktop App</a> for writing suggestions! </p>
+              <div class="screenshot">
+                <a target="_blank" href="https://chromewebstore.google.com/detail/grammarly-ai-writing-and/kbfnbcaeplbcioakkpcpgfkobkghlhen">
+                  <img src="https://s13.gifyu.com/images/SC5N2.png" alt="screenshot-1" class="img-fluid">
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header text-white">  
+            <strong class="me-auto">NOTIFICATION</strong>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body bg-white">
+
+            <div class="toast-item">
+              <p>&#x2609; Added <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">Session Storage</a> Functionality for temporary Database </p>
+              <div class="screenshot">
+                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">
+                  <img src="https://s13.gifyu.com/images/SC5NM.png" alt="screenshot-1" class="img-fluid">
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--  modal -->
+    <div class="modal fade dark--theme" id="settingsTabNav" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="settingsTabNavLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div>
+            <div class="modal-header">
+              <h5 class="modal-title" id="settingsTabNavLabel"><i class="fas fa-sliders-h fa-lg pe-2"></i>Settings & Configurations</h5>
+              <button type="button" class="btn ms-3 text-uppercase shadow-none close-save" id="save--settings" data-bs-dismiss="modal" aria-label="Close">Save & Close</button>
+            </div>
+            <div class="modal-body">
+              <div class="row" id="gc-settings-fields">
+                <div class="col-6 mb-3">
+                  <div class="settings--item p-3" id="cb-updates">
+                    <p class="mb-2"><label class="label">Updates</label></p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-field" type="checkbox" id="updates-1">
+                      <label class="form-check-label" for="updates-1">Hide Field</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-label" type="checkbox" id="updates-2">
+                      <label class="form-check-label" for="updates-2">Hide Label</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none customization-label" type="checkbox" id="c-updates">
+                      <label class="form-check-label" for="c-updates">Custom Label</label>
+                    </div>
+                    <input type="text" class="shadow-none mt-2 custom-text w-100" placeholder="Enter Custom Label" />
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="settings--item p-3" id="cb-updated-links">
+                    <p class="mb-2"><label class="label">Updated Links</label></p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-field" type="checkbox" id="updated-links-1">
+                      <label class="form-check-label" for="updated-links-1">Hide Field</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-label" type="checkbox" id="updated-links-2">
+                      <label class="form-check-label" for="updated-links-2">Hide Label</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none customization-label" type="checkbox" id="c-updated-links">
+                      <label class="form-check-label" for="c-updated-links">Custom Label</label>
+                    </div>
+                    <input type="text" class="shadow-none mt-2 custom-text w-100" placeholder="Enter Custom Label" />
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="settings--item p-3" id="cb-note">
+                    <p class="mb-2"><label class="label">Note</label></p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-field" type="checkbox" id="note-1">
+                      <label class="form-check-label" for="note-1">Hide Field</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-label" type="checkbox" id="note-2">
+                      <label class="form-check-label" for="note-2">Hide Label</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none customization-label" type="checkbox" id="c-note">
+                      <label class="form-check-label" for="c-note">Custom Label</label>
+                    </div>
+                    <input type="text" class="shadow-none mt-2 custom-text w-100" placeholder="Enter Custom Label" />
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="settings--item p-3" id="cb-rt">
+                    <p class="mb-2"><label class="label">Remaining Task</label></p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-field" type="checkbox" id="rt-1">
+                      <label class="form-check-label" for="rt-1">Hide Field</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-label" type="checkbox" id="rt-2">
+                      <label class="form-check-label" for="rt-2">Hide Label</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none customization-label" type="checkbox" id="c-rt">
+                      <label class="form-check-label" for="c-rt">Custom Label</label>
+                    </div>
+                    <input type="text" class="shadow-none mt-2 custom-text w-100" placeholder="Enter Custom Label" />
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="settings--item p-3" id="cb-upsell">
+                    <p class="mb-2"><label class="label">upsell</label></p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-field" type="checkbox" id="upsell-1">
+                      <label class="form-check-label" for="upsell-1">Hide Field</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-label" type="checkbox" id="upsell-2">
+                      <label class="form-check-label" for="upsell-2">Hide Label</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none customization-label" type="checkbox" id="c-upsell">
+                      <label class="form-check-label" for="c-upsell">Custom Label</label>
+                    </div>
+                    <input type="text" class="shadow-none mt-2 custom-text w-100" placeholder="Enter Custom Label" />
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="settings--item p-3" id="cb-reference-link">
+                    <p class="mb-2"><label class="label">Reference Links</label></p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-field" type="checkbox" id="reference-link-1">
+                      <label class="form-check-label" for="reference-link-1">Hide Field</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-label" type="checkbox" id="reference-link-2">
+                      <label class="form-check-label" for="reference-link-2">Hide Label</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none customization-label" type="checkbox" id="c-reference-link">
+                      <label class="form-check-label" for="c-reference-link">Custom Label</label>
+                    </div>
+                    <input type="text" class="shadow-none mt-2 custom-text w-100" placeholder="Enter Custom Label" />
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="settings--item p-3" id="cb-time-consumed">
+                    <p class="mb-2"><label class="label">Time Consumed</label></p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-field" type="checkbox" id="time-consumed-1">
+                      <label class="form-check-label" for="time-consumed-1">Hide Field</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-label" type="checkbox" id="time-consumed-2">
+                      <label class="form-check-label" for="time-consumed-2">Hide Label</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none customization-label" type="checkbox" id="c-time-consumed">
+                      <label class="form-check-label" for="c-time-consumed">Custom Label</label>
+                    </div>
+                    <input type="text" class="shadow-none mt-2 custom-text w-100" placeholder="Enter Custom Label" />
+                  </div>
+                </div>
+                <div  class="col-3 mb-3">
+                  <div class="settings--item p-3" id="cb-role">
+                    <p class="mb-2"><label class="label">role</label></p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="devops1" value="Developer">
+                      <label class="form-check-label" for="devops1">Developer</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="desops1" value="Designer">
+                      <label class="form-check-label" for="desops1">Designer</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2 mb-3">
+                  <div class="settings--item p-3" id="cb-vid-bg">
+                    <p class="mb-2"><label class="label">Video BG</label></p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input shadow-none rearm-field" type="checkbox" id="vid-bg">
+                      <label class="form-check-label" for="vid-bg">Disable</label>
+                    </div>
+                  </div>
+                </div>
+                <div  class="col-1 mb-3">
+                  <div class="d-flex justify-content-end text-right">
+                    <button class="shadow-none border-none" id="darkmode-switcher">
+                      <img src="https://s13.gifyu.com/images/SC5EO.png" width="60" alt="dawn" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-sm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="myrole">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body bg-dark">
+            <button type="button" class="btn btn-outline-light" data-id="Developer" data-dismiss="modal">I am Developer</button>
+            <button type="button" class="btn btn-outline-light" data-id="Designer" data-dismiss="modal">I am Designer</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row px-5" id="body">
+      <div class="col-xl-6 col-sm-12">
+        <div class="gcb-body shadow">
+          <!-- header -->
+          <header class="top-header">
+            <div class="px-3 py-2 text-white">
+              <div class="container-fluid px-5">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                  <a href="https://gcb-ops.github.io/gcb-house/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <img src="https://s13.gifyu.com/images/SC5wE.png" alt="gc_logo" class="bi me-2" width="55" height="50" id="logo-gcb" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </header>
+    
+          <!-- generator / editor -->
+          <div class="container-fluid pt-4 gc-gen">
+            <section id="forms">
+              <div class="row">
+    
+                <!-- create report -->
+                <div class="col-12">
+                  <div class="text-center unhighlightsselect">
+                    <h5 class="text-uppercase title-header"><span class="p-2">Construct</span><span class="p-2">Report</span></h5>
+                  </div>
+                  <div class="gc-form mx-5 gc-scroll">
+                    <div class="mb-3 form-controller">
+                      <textarea class="form-control shadow-none" id="greeting" placeholder="Greetings"></textarea>
+                      <label class="form-label">Greetings</label>
+                    </div>
+                    <div class="mb-3 form-controller">
+                      <textarea class="form-control shadow-none" id="introduction" placeholder="Message Body"></textarea>
+                      <label class="form-label">Message Body</label>
+                    </div>
+                    <div class="mb-3 form-controller gc-dynamic-input" id="update">
+                      <textarea class="form-control shadow-none mb-1 textarea" placeholder="Latest Updates"></textarea>
+                      <label class="form-label">Latest Updates</label>
+                    </div>
+                    <div class="mb-3 form-controller" id="updated-links">
+                      <textarea class="form-control shadow-none" id="update-list" placeholder="Updated Links"></textarea>
+                      <label  class="form-label">Updated Links</label>
+                    </div>
+                    <div class="mb-3 form-controller gc-dynamic-input" id="note">
+                      <textarea class="form-control shadow-none mb-1 textarea" placeholder="Notes"></textarea>
+                      <label  class="form-label">Notes</label>
+                    </div> 
+                    <div class="mb-3 form-controller gc-dynamic-input" id="rt">
+                      <textarea class="form-control shadow-none mb-1 textarea" placeholder="Remaining Tasks"></textarea>
+                      <label  class="form-label">Remaining Tasks</label>
+                    </div> 
+                    <div class="mb-3 form-controller gc-dynamic-input" id="upsell">
+                      <textarea class="form-control shadow-none mb-1 textarea" placeholder="Upsells"></textarea>
+                      <label  class="form-label">Upsells</label>
+                    </div> 
+                    <div class="mb-3 form-controller" id="reference-links">
+                      <textarea class="form-control shadow-none" id="reference-list" placeholder="Reference Links"></textarea>
+                      <label  class="form-label">Reference Links</label>
+                    </div> 
+                    <div class="mb-3 form-controller" id="time-consumed">
+                      <input type="text" placeholder="Time Consumed" class="form-control shadow-none" id="time-consumed-tt" onfocus="this.type='time'" onblur="this.type='text'">
+                      <label class="form-label">Time Consumed</label>
+                    </div>
+                    <div class="mb-3 form-controller">
+                      <select class="form-control shadow-none" id="role" placeholder="Member">
+                        <option value="members" selected>Members</option>
+                        <option data-type="Developer" value="Joshua">Joshua</option>
+                        <option data-type="Developer" value="Khayle">Khayle</option>
+                        <option data-type="Developer" value="Ardhen">Ardhen</option>
+                        <option data-type="Developer" value="Melvin">Melvin</option>
+                        <option data-type="Developer" value="Harold">Harold</option>
+                        <option data-type="Developer" value="Florence">Florence</option>
+                        <option data-type="Developer" value="Jayson">Jayson</option>
+                        <option data-type="Developer" value="Kenneth">Kenneth</option>
+                        <option data-type="Developer" value="Ron">Ron</option>
+                        <option data-type="Developer" value="Kester">Kester</option>
+                        <option data-type="Developer" value="Lawrence">Lawrence</option>
+                        <option data-type="Developer" value="Paulie">Paulie</option>
+                        <option data-type="Developer" value="Paul">Paul</option>
+                        <option data-type="Designer" value="John Mark">John Mark</option>
+                        <option data-type="Designer" value="Archie">Archie</option>
+                        <option data-type="Designer" value="Jeric">Jeric</option>
+                      </select>
+                      <label class="form-label">Member</label>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+            </section>  
+          </div>
+
+        </div>
+      </div>
+      <div class="col-xl-6 col-12">
+        <div class="gcb-body shadow">
+          <!-- header -->
+          <header class="top-header">
+            <div class="px-3 py-2 text-white">
+              <div class="container-fluid px-5">
+                <div class="d-flex flex-wrap align-items-end justify-content-end justify-content-lg-send">
+                  <ul class="nav col-12 col-lg-auto pt-2 justify-content-center my-md-0 text-small text-center menus">
+                    <li data-bs-toggle="modal" data-bs-target="#settingsTabNav">
+                      <i class="fas fa-sliders-h fa-lg"></i>
+                      <a class="nav-link pt-0">Settings</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+    
+          <!-- generator / editor -->
+          <div class="container-fluid pt-4 gc-gen" id="gc-gen-report">
+            <section id="clipboard-report-gen">
+              <div class="row">
+    
+                <!-- generated report -->
+                <div class="col-12">
+                  <div class="text-center">
+                    <h5 class="text-uppercase title-header"><span class="p-2">Report</span><span class="p-2">Clipboard</span></h5>
+                  </div>
+                  <div id="clipboard" class="mx-5">
+                    <div class="tool-container">
+                      <button class="tool-clipboard copy"><span><i class="fas fa-copy"></i></span></button>
+                      <button class="tool-clipboard grammar-check"><span><i class="fas fa-spell-check"></i></span></button>
+                    </div>
+                    <div class="mt-4 p-4 clipboard uneditable gc-scroll" id="clipboardToCopy">
+                      <div class="module">
+                          <p id="gcb-greeting">Hi there,</p>
+                      </div>
+                      <div class="module">
+                          <p id="gcb-introduction"></p>
+                      </div>
+                        <br />
+                      <div class="module label">
+                        <p id="gcb-updates">Here are the latest updates:</p>
+                      </div>
+                      <div class="module">
+                          <p id="gcb-update-list"></p>
+                      </div>
+                        <br />
+                      <div class="module label">
+                          <p id="gcb-links">Edited Pages:</p>
+                      </div>
+                      <div class="module">
+                          <p id="gcb-link-list"></p>
+                      </div>
+                        <br />
+                      <div class="module label">
+                          <p id="gcb-notes">Notes:</p>
+                      </div>
+                      <div class="module">
+                          <p id="gcb-note-list"></p>
+                      </div>   
+                        <br />
+                      <div class="module label">
+                        <p id="gcb-rt">Remaining Tasks:</p>
+                      </div>
+                      <div class="module">
+                          <p id="gcb-rt-list"></p>
+                      </div>     
+                        <br />
+                      <div class="module label">
+                        <p id="gcb-upsells">Upsells:</p>
+                      </div>
+                      <div class="module">
+                          <p id="gcb-upsells-list"></p>
+                      </div> 
+                        <br />
+                      <div class="module label">
+                          <p id="gcb-reference">Reference Links:</p>
+                      </div>
+                      <div class="module">
+                          <p id="gcb-reference-list"></p>
+                      </div>
+                        <br />
+                      <div class="module label">
+                          <p id="gcb-time">Time Consumed:</p>
+                      </div>
+                        <br />
+                      <div class="module label">
+                        <p id="gcb-role">Role: </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+            </section>  
+          </div>
+    
+        </div>
+      </div>
+    </div>
+<script src="report.js"></script>
+</body>
+</html>
