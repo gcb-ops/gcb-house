@@ -368,7 +368,7 @@ function loadLibraries(index) {
           $(document).on("input", ".gc-form .form-control", function(){  
               
               ele = $(this);
-              id = ele.attr("id")
+              id = ele.parent().attr("id")
               val = ele.val()
               dev(val)
               dev(id)
