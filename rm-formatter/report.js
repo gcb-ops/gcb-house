@@ -368,10 +368,8 @@ function loadLibraries(index) {
           $(document).on("input", ".gc-form .form-control", function(){  
               
               ele = $(this);
-              id = ele.parent().attr("id")
+              id = ele.attr("id")
               val = ele.val()
-              dev(val)
-              dev(id)
               
               switch(id) {
                   case "greeting":
@@ -383,27 +381,6 @@ function loadLibraries(index) {
                       break;
                   case "introduction":
                       $("#gcb-introduction").text(val);
-                      break;
-                  case "update-list":
-                      $("#gcb-link-list").text(val);
-                      break;
-                  case "reference-list":
-                      $("#gcb-reference-list").text(val);
-                      break;
-                  case "update":
-                      $("#gcb-link-list").text(val);
-                      break;
-                  case "note":
-                    dev("note: " + val )
-                      $("#gcb-note-list").text(val);
-                      break;
-                  case "rt":
-                    dev("rt: " + val )
-                      $("#gcb-rt-list").text(val);
-                      break;
-                  case "upsell":
-                    dev("val: " + val )
-                      $("#gcb-upsells-list").text(val);
                       break;
                   case "time-consumed-tt":
                       $("#gcb-time").text("Time Consumed: " + val);
@@ -452,7 +429,11 @@ function loadLibraries(index) {
               for(let i = 0; i < ctr; i++) {
                   currHtml += "<span>" + leadChar + parent.find("textarea").eq(i).val() + "</span><br />"
               }
-              $(`#gcb-${parent.attr("id")}-list`).html(currHtml);
+              if(parent.attr("id") == "upsell") { 
+                $(`#gcb-${parent.attr("id")}s-list`).html(currHtml);
+              } else {
+                $(`#gcb-${parent.attr("id")}-list`).html(currHtml);
+              }
               
           });
       
