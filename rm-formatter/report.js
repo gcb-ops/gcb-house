@@ -399,6 +399,7 @@ function loadLibraries(index) {
                       $("#gcb-rt-list").text(val);
                       break;
                   case "upsell":
+                    dev("val: " + val )
                       $("#gcb-upsells-list").text(val);
                       break;
                   case "time-consumed-tt":
