@@ -393,9 +393,11 @@ function loadLibraries(index) {
                       $("#gcb-link-list").text(val);
                       break;
                   case "note":
+                    dev("note: " + val )
                       $("#gcb-note-list").text(val);
                       break;
                   case "rt":
+                    dev("rt: " + val )
                       $("#gcb-rt-list").text(val);
                       break;
                   case "upsell":
