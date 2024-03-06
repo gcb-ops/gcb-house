@@ -371,6 +371,7 @@ function loadLibraries(index) {
               id = ele.attr("id")
               val = ele.val()
               dev(val)
+              dev(id)
               
               switch(id) {
                   case "greeting":
