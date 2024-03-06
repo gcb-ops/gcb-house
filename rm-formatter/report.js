@@ -257,8 +257,8 @@ function loadLibraries(index) {
                               if(myRole == "Designer") {
                                   document.getElementById('desops1').checked = true;
                                   $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
-                                  $("#gcb-upsells").parents(".module").find("br").css("display", "none")
-                                  $("#gcb-reference").parents(".module").find("br").css("display", "none")
+                                  $("#gcb-upsells").parent().prev().css("display", "none")
+                                  $("#gcb-reference").parent().prev().css("display", "none")
                               } else {
                                   document.getElementById('devops1').checked = true;
                               }
@@ -315,8 +315,8 @@ function loadLibraries(index) {
                   if(role == "Designer") {
                       document.getElementById('desops1').checked = true;
                       $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
-                      $("#gcb-upsells").parents(".module").find("br").css("display", "none")
-                      $("#gcb-reference").parents(".module").find("br").css("display", "none")
+                      $("#gcb-upsells").parent().prev().css("display", "none")
+                      $("#gcb-reference").parent().prev().css("display", "none")
                   } else {
                       document.getElementById('devops1').checked = true;
                       $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "block")
@@ -806,8 +806,8 @@ function loadLibraries(index) {
                                           console.log(valR)
                                           if(valR == "Designer") {
                                               $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
-                                              $("#gcb-upsells").parents(".module").find("br").css("display", "none")
-                                              $("#gcb-reference").parents(".module").find("br").css("display", "none")
+                                              $("#gcb-upsells").parent().prev().css("display", "none")
+                                              $("#gcb-reference").parent().prev().css("display", "none")
                                           } else {
                                               $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "block")
                                           }
