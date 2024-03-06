@@ -257,7 +257,8 @@ function loadLibraries(index) {
                               if(myRole == "Designer") {
                                   document.getElementById('desops1').checked = true;
                                   $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
-                                  $("#gcb-upsells, #gcb-reference").parents(".module").find("br").css("display", "none")
+                                  $("#gcb-upsells").parents(".module").find("br").css("display", "none")
+                                  $("#gcb-reference").parents(".module").find("br").css("display", "none")
                               } else {
                                   document.getElementById('devops1').checked = true;
                               }
@@ -314,7 +315,8 @@ function loadLibraries(index) {
                   if(role == "Designer") {
                       document.getElementById('desops1').checked = true;
                       $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
-                      $("#gcb-upsells, #gcb-reference").parents(".module").find("br").css("display", "none")
+                      $("#gcb-upsells").parents(".module").find("br").css("display", "none")
+                      $("#gcb-reference").parents(".module").find("br").css("display", "none")
                   } else {
                       document.getElementById('devops1').checked = true;
                       $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "block")
@@ -368,6 +370,7 @@ function loadLibraries(index) {
               ele = $(this);
               id = ele.attr("id")
               val = ele.val()
+              dev(val)
               
               switch(id) {
                   case "greeting":
@@ -396,7 +399,6 @@ function loadLibraries(index) {
                       $("#gcb-rt-list").text(val);
                       break;
                   case "upsell":
-                      dev(val)
                       $("#gcb-upsells-list").text(val);
                       break;
                   case "time-consumed-tt":
@@ -804,7 +806,8 @@ function loadLibraries(index) {
                                           console.log(valR)
                                           if(valR == "Designer") {
                                               $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
-                                              $("#gcb-upsells, #gcb-reference").parents(".module").find("br").css("display", "none")
+                                              $("#gcb-upsells").parents(".module").find("br").css("display", "none")
+                                              $("#gcb-reference").parents(".module").find("br").css("display", "none")
                                           } else {
                                               $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "block")
                                           }
