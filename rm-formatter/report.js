@@ -149,11 +149,14 @@ function loadLibraries(index) {
                           if(ele.hasClass("rearm-field") && currentSettings.updatedLinksFieldsHide == 1) {
                               ele.prop('checked', true);
                               $(`#${parent}`).find(".rearm-label, .customization-label").attr("disabled", true)
+                              dev("1")
                               $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).hide()
                           } else if(ele.hasClass("rearm-label") && currentSettings.updatedLinksLabelHide == 1) {
+                            dev("2")
                               ele.prop('checked', true);
                               $(`#${settingsCustomizationArrayId.updatedLinks[1]}, #${settingsCustomizationArrayId.updatedLinks[1]}-list`).hide()
                           } else {
+                            dev("3")
                               text = currentSettings.updatedLinksFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
                                   ele.prop('checked', true);
