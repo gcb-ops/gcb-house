@@ -149,14 +149,11 @@ function loadLibraries(index) {
                           if(ele.hasClass("rearm-field") && currentSettings.updatedLinksFieldsHide == 1) {
                               ele.prop('checked', true);
                               $(`#${parent}`).find(".rearm-label, .customization-label").attr("disabled", true)
-                              dev("1")
                               $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).hide()
                           } else if(ele.hasClass("rearm-label") && currentSettings.updatedLinksLabelHide == 1) {
-                            dev("2")
                               ele.prop('checked', true);
                               $(`#${settingsCustomizationArrayId.updatedLinks[1]}, #${settingsCustomizationArrayId.updatedLinks[1]}-list`).hide()
                           } else {
-                            dev("3")
                               text = currentSettings.updatedLinksFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
                                   ele.prop('checked', true);
@@ -262,6 +259,9 @@ function loadLibraries(index) {
                                   $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
                                   $("#gcb-upsells").parent().prev().css("display", "none")
                                   $("#gcb-reference").parent().prev().css("display", "none")
+                                  $("#gcb-links").text("Updated Links");
+                                  $("#updated-links label").text("Updated Links");
+                                  $("#updated-links textarea").attr("placeholder", "Updated Links");
                               } else {
                                   document.getElementById('devops1').checked = true;
                               }
@@ -318,6 +318,9 @@ function loadLibraries(index) {
                   if(role == "Designer") {
                       document.getElementById('desops1').checked = true;
                       $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
+                      $("#gcb-links").text("Updated Links");
+                      $("#updated-links label").text("Updated Links");
+                      $("#updated-links textarea").attr("placeholder", "Updated Links");
                       $("#gcb-upsells").parent().prev().css("display", "none")
                       $("#gcb-reference").parent().prev().css("display", "none")
                   } else {
@@ -434,6 +437,8 @@ function loadLibraries(index) {
               }
               if(parent.attr("id") == "upsell") { 
                 $(`#gcb-${parent.attr("id")}s-list`).html(currHtml);
+              } else if(parent.attr("id") == "updated-links") { 
+                $(`#gcb-link-list`).html(currHtml);
               } else {
                 $(`#gcb-${parent.attr("id")}-list`).html(currHtml);
               }
