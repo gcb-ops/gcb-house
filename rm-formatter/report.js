@@ -598,16 +598,19 @@ function loadLibraries(index) {
                               if(ele.hasClass("rearm-field")) {
                                   if(ele.is(':checked')) {
                                       currentSettings.updatedLinksFieldsHide = 1
+                                      dev("12")
                                       $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).hide()
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).hide()
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}-list`).hide()
                                   } else {
+                                    dev("13")
                                       currentSettings.updatedLinksFieldsHide = 0
                                       $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).show()
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).show()
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}-list`).show()
                                   }
                               } else if(ele.hasClass("customization-label")) {
+                                dev("14")
                                   if(ele.is(':checked')) {
                                       text = $(`#${parent}`).find(".custom-text").val()
                                       currentSettings.updatedLinksFieldLabelText = text
@@ -617,6 +620,7 @@ function loadLibraries(index) {
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).text("Updated Links:")
                                   }
                               } else {
+                                dev("15")
                                   if(ele.is(':checked')) {
                                       currentSettings.updatedLinksLabelHide = 1
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).hide()
