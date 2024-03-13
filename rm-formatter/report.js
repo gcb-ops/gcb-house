@@ -435,11 +435,13 @@ function loadLibraries(index) {
               for(let i = 0; i < ctr; i++) {
                   currHtml += "<span>" + leadChar + parent.find("textarea").eq(i).val() + "</span><br />"
               }
-              
+
               if(parent.attr("id") == "upsell") { 
                 $(`#gcb-${parent.attr("id")}s-list`).html(currHtml);
               } else if(parent.attr("id") == "updated-links") { 
                 $(`#gcb-link-list`).html(currHtml);
+              } else if(parent.attr("id") == "reference-links") { 
+                $(`#gcb-reference`).html(currHtml);
               } else {
                 $(`#gcb-${parent.attr("id")}-list`).html(currHtml);
               }
