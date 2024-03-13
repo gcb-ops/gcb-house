@@ -48,6 +48,10 @@ br {
     color: var(--white) !important;
 }
 
+.hid-el {
+    display: none !important;
+}
+
 /* custom */
 
 /* custom textarea */
@@ -392,7 +396,6 @@ header.top-header {
     border: none;
     border-bottom: 1px solid #f2f2f2;
     padding-left: 5px;
-    display: none;
 }   
 
 .modal .settings--item .custom-text:focus {

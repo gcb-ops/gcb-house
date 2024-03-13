@@ -140,7 +140,7 @@ function loadLibraries(index) {
                               text = currentSettings.updatesFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
                                   ele.prop('checked', true);
-                                  $(`#${parent}`).find(".custom-text").css("display", "block").val(text)
+                                  $(`#${parent}`).find(".custom-text").removeClass("hid-el").val(text)
                                   $(`#${settingsCustomizationArrayId.updates[1]}`).text(text)
                               }
                           }
@@ -157,7 +157,7 @@ function loadLibraries(index) {
                               text = currentSettings.updatedLinksFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
                                   ele.prop('checked', true);
-                                  $(`#${parent}`).find(".custom-text").css("display", "block").val(text)
+                                  $(`#${parent}`).find(".custom-text").removeClass("hid-el").val(text)
                                   $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).text(text)
                               }
                           }
@@ -174,7 +174,7 @@ function loadLibraries(index) {
                               text = currentSettings.noteFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
                                   ele.prop('checked', true);
-                                  $(`#${parent}`).find(".custom-text").css("display", "block").val(text)
+                                  $(`#${parent}`).find(".custom-text").removeClass("hid-el").val(text)
                                   $(`#${settingsCustomizationArrayId.note[1]}`).text(text)
                               }
                           }
@@ -191,7 +191,7 @@ function loadLibraries(index) {
                               text = currentSettings.rtFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
                                   ele.prop('checked', true);
-                                  $(`#${parent}`).find(".custom-text").css("display", "block").val(text)
+                                  $(`#${parent}`).find(".custom-text").removeClass("hid-el").val(text)
                                   $(`#${settingsCustomizationArrayId.rt[1]}`).text(text)
                               }
                           }
@@ -208,7 +208,7 @@ function loadLibraries(index) {
                               text = currentSettings.upsellFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
                                   ele.prop('checked', true);
-                                  $(`#${parent}`).find(".custom-text").css("display", "block").val(text)
+                                  $(`#${parent}`).find(".custom-text").removeClass("hid-el").val(text)
                                   $(`#${settingsCustomizationArrayId.upsell[1]}`).text(text)
                               }
                           }
@@ -225,7 +225,7 @@ function loadLibraries(index) {
                               text = currentSettings.referenceLinkFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
                                   ele.prop('checked', true);
-                                  $(`#${parent}`).find(".custom-text").css("display", "block").val(text)
+                                  $(`#${parent}`).find(".custom-text").removeClass("hid-el").val(text)
                                   $(`#${settingsCustomizationArrayId.referenceLink[1]}`).text(text)
                               }
                           }
@@ -242,7 +242,7 @@ function loadLibraries(index) {
                               text = currentSettings.timeConsumedFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
                                   ele.prop('checked', true);
-                                  $(`#${parent}`).find(".custom-text").css("display", "block").val(text)
+                                  $(`#${parent}`).find(".custom-text").removeClass("hid-el").val(text)
                                   $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).text(text)
                               }
                           }
@@ -256,9 +256,9 @@ function loadLibraries(index) {
                               var myRole = currentSettings.currentRole;
                               if(myRole == "Designer") {
                                   document.getElementById('desops1').checked = true;
-                                  $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
-                                  $("#gcb-upsells").parent().prev().css("display", "none")
-                                  $("#gcb-reference").parent().prev().css("display", "none")
+                                  $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").addClass("hid-el")
+                                  $("#gcb-upsells").parent().prev().addClass("hid-el")
+                                  $("#gcb-reference").parent().prev().addClass("hid-el")
                                   $("#gcb-links").text("Updated Links");
                                   $("#updated-links label").text("Updated Links");
                                   $("#updated-links textarea").attr("placeholder", "Updated Links");
@@ -317,15 +317,15 @@ function loadLibraries(index) {
                   setSessionStorage("test1.customization.settings", GcurrentSettings )
                   if(role == "Designer") {
                       document.getElementById('desops1').checked = true;
-                      $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
+                      $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").addClass("hid-el")
                       $("#gcb-links").text("Updated Links");
                       $("#updated-links label").text("Updated Links");
                       $("#updated-links textarea").attr("placeholder", "Updated Links");
-                      $("#gcb-upsells").parent().prev().css("display", "none")
-                      $("#gcb-reference").parent().prev().css("display", "none")
+                      $("#gcb-upsells").parent().prev().addClass("hid-el")
+                      $("#gcb-reference").parent().prev().addClass("hid-el")
                   } else {
                       document.getElementById('devops1').checked = true;
-                      $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "block")
+                      $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").removeClass("hid-el")
                   }
                 $("#gcb-role").text(role + ": ");
                 $("select#role").find('option:first-child').prop('selected', true);
@@ -460,9 +460,9 @@ function loadLibraries(index) {
                   }
               } else if(el.hasClass("customization-label")) {
                   if(el.is(':checked')) {
-                      parent.find(".custom-text").css("display", "block")
+                      parent.find(".custom-text").removeClass("hid-el")
                   } else {
-                      parent.find(".custom-text").css("display", "none")
+                      parent.find(".custom-text").addClass("hid-el")
                   }
               }
       
@@ -802,11 +802,11 @@ function loadLibraries(index) {
                                           currentSettings.currentRole = valR;
                                           console.log(valR)
                                           if(valR == "Designer") {
-                                              $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "none")
-                                              $("#gcb-upsells").parent().prev().css("display", "none")
-                                              $("#gcb-reference").parent().prev().css("display", "none")
+                                              $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").addClass("hid-el")
+                                              $("#gcb-upsells").parent().prev().addClass("hid-el")
+                                              $("#gcb-reference").parent().prev().addClass("hid-el")
                                           } else {
-                                              $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").css("display", "block")
+                                              $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").removeClass("hid-el")
                                           }
                                           $("#gcb-role").text(valR + ": ");
                                           $("select#role").find('option:first-child').prop('selected', true);
