@@ -132,10 +132,10 @@ function loadLibraries(index) {
                           if(ele.hasClass("rearm-field") && currentSettings.updatesFieldsHide == 1) {
                               ele.prop('checked', true);
                               $(`#${parent}`).find(".rearm-label, .customization-label").attr("disabled", true)
-                              $(`#${settingsCustomizationArrayId.updates[0]}`).hide()
+                              $(`#${settingsCustomizationArrayId.updates[0]}`).addClass("hid-el")
                           } else if(ele.hasClass("rearm-label") && ele.hasClass("rearm-label") && currentSettings.updatesLabelHide == 1) {
                               ele.prop('checked', true);
-                              $(`#${settingsCustomizationArrayId.updates[1]}, #${settingsCustomizationArrayId.updates[1]}-list`).hide()
+                              $(`#${settingsCustomizationArrayId.updates[1]}, #${settingsCustomizationArrayId.updates[1]}-list`).addClass("hid-el")
                           } else {
                               text = currentSettings.updatesFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
@@ -149,10 +149,10 @@ function loadLibraries(index) {
                           if(ele.hasClass("rearm-field") && currentSettings.updatedLinksFieldsHide == 1) {
                               ele.prop('checked', true);
                               $(`#${parent}`).find(".rearm-label, .customization-label").attr("disabled", true)
-                              $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).hide()
+                              $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).addClass("hid-el")
                           } else if(ele.hasClass("rearm-label") && currentSettings.updatedLinksLabelHide == 1) {
                               ele.prop('checked', true);
-                              $(`#${settingsCustomizationArrayId.updatedLinks[1]}, #${settingsCustomizationArrayId.updatedLinks[1]}-list`).hide()
+                              $(`#${settingsCustomizationArrayId.updatedLinks[1]}, #${settingsCustomizationArrayId.updatedLinks[1]}-list`).addClass("hid-el")
                           } else {
                               text = currentSettings.updatedLinksFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
@@ -166,10 +166,10 @@ function loadLibraries(index) {
                           if(ele.hasClass("rearm-field") && currentSettings.noteFieldsHide == 1) {
                               ele.prop('checked', true);
                               $(`#${parent}`).find(".rearm-label, .customization-label").attr("disabled", true)
-                              $(`#${settingsCustomizationArrayId.note[0]}`).hide()
+                              $(`#${settingsCustomizationArrayId.note[0]}`).addClass("hid-el")
                           } else if(ele.hasClass("rearm-label") && currentSettings.noteLabelHide == 1) {
                               ele.prop('checked', true);
-                              $(`#${settingsCustomizationArrayId.note[1]}, #${settingsCustomizationArrayId.note[1]}-list`).hide()
+                              $(`#${settingsCustomizationArrayId.note[1]}, #${settingsCustomizationArrayId.note[1]}-list`).addClass("hid-el")
                           } else {
                               text = currentSettings.noteFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
@@ -183,10 +183,10 @@ function loadLibraries(index) {
                           if(ele.hasClass("rearm-field") && currentSettings.rtFieldsHide == 1) {
                               ele.prop('checked', true);
                               $(`#${parent}`).find(".rearm-label, .customization-label").attr("disabled", true)
-                              $(`#${settingsCustomizationArrayId.rt[0]}`).hide()
+                              $(`#${settingsCustomizationArrayId.rt[0]}`).addClass("hid-el")
                           } else if(ele.hasClass("rearm-label") && currentSettings.rtLabelHide == 1) {
                               ele.prop('checked', true);
-                              $(`#${settingsCustomizationArrayId.rt[1]}, #${settingsCustomizationArrayId.rt[1]}-list`).hide()
+                              $(`#${settingsCustomizationArrayId.rt[1]}, #${settingsCustomizationArrayId.rt[1]}-list`).addClass("hid-el")
                           } else {
                               text = currentSettings.rtFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
@@ -200,10 +200,10 @@ function loadLibraries(index) {
                           if(ele.hasClass("rearm-field") && currentSettings.upsellFieldsHide == 1) {
                               ele.prop('checked', true);
                               $(`#${parent}`).find(".rearm-label, .customization-label").attr("disabled", true)
-                              $(`#${settingsCustomizationArrayId.upsell[0]}`).hide()
+                              $(`#${settingsCustomizationArrayId.upsell[0]}`).addClass("hid-el")
                           } else if(ele.hasClass("rearm-label") && currentSettings.upsellLabelHide == 1) {
                               ele.prop('checked', true);
-                              $(`#${settingsCustomizationArrayId.upsell[1]}, #${settingsCustomizationArrayId.upsell[1]}-list`).hide()
+                              $(`#${settingsCustomizationArrayId.upsell[1]}, #${settingsCustomizationArrayId.upsell[1]}-list`).addClass("hid-el")
                           } else {
                               text = currentSettings.upsellFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
@@ -217,10 +217,10 @@ function loadLibraries(index) {
                           if(ele.hasClass("rearm-field") && currentSettings.referenceLinkFieldsHide == 1) {
                               ele.prop('checked', true);
                               $(`#${parent}`).find(".rearm-label, .customization-label").attr("disabled", true)
-                              $(`#${settingsCustomizationArrayId.referenceLink[0]}`).hide()
+                              $(`#${settingsCustomizationArrayId.referenceLink[0]}`).addClass("hid-el")
                           } else if(ele.hasClass("rearm-label") && currentSettings.referenceLinkLabelHide == 1) {
                               ele.prop('checked', true);
-                              $(`#${settingsCustomizationArrayId.referenceLink[1]}, #${settingsCustomizationArrayId.referenceLink[1]}-list`).hide()
+                              $(`#${settingsCustomizationArrayId.referenceLink[1]}, #${settingsCustomizationArrayId.referenceLink[1]}-list`).addClass("hid-el")
                           } else {
                               text = currentSettings.referenceLinkFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
@@ -234,10 +234,10 @@ function loadLibraries(index) {
                           if(ele.hasClass("rearm-field") && currentSettings.timeConsumedFieldsHide == 1) {
                               ele.prop('checked', true);
                               $(`#${parent}`).find(".rearm-label, .customization-label").attr("disabled", true)
-                              $(`#${settingsCustomizationArrayId.timeConsumed[0]}`).hide()
+                              $(`#${settingsCustomizationArrayId.timeConsumed[0]}`).addClass("hid-el")
                           } else if(ele.hasClass("rearm-label") && currentSettings.timeConsumedLabelHide == 1) {
                               ele.prop('checked', true);
-                              $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).hide()
+                              $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).addClass("hid-el")
                           } else {
                               text = currentSettings.timeConsumedFieldLabelText
                               if(ele.hasClass("customization-label") && text != "") {
@@ -269,9 +269,9 @@ function loadLibraries(index) {
                               $('select#role option').each(function() {
                                   var option = $(this)
                                   if(option.data("type") != myRole && option.val() != "members") {
-                                      option.hide();
+                                      option.addClass("hid-el")
                                   } else {
-                                      option.show();
+                                      option.removeClass("hid-el")
                                   }
                               });
                           }
@@ -332,9 +332,9 @@ function loadLibraries(index) {
                 $('select#role option').each(function() {
                     var option = $(this)
                     if(option.data("type") != role && option.val() != "members") {
-                        option.hide();
+                        option.addClass("hid-el")
                     } else {
-                        option.show();
+                        option.removeClass("hid-el")
                     }
                 });
                   let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('myrole')) 
@@ -571,14 +571,14 @@ function loadLibraries(index) {
                               if(ele.hasClass("rearm-field")) {
                                   if(ele.is(':checked')) {
                                       currentSettings.updatesFieldsHide = 1
-                                      $(`#${settingsCustomizationArrayId.updates[0]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.updates[1]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.updates[1]}-list`).hide()
+                                      $(`#${settingsCustomizationArrayId.updates[0]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.updates[1]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.updates[1]}-list`).addClass("hid-el")
                                   } else {
                                       currentSettings.updatesFieldsHide = 0
-                                      $(`#${settingsCustomizationArrayId.updates[0]}`).show()
-                                      $(`#${settingsCustomizationArrayId.updates[1]}`).show()
-                                      $(`#${settingsCustomizationArrayId.updates[1]}-list`).show()
+                                      $(`#${settingsCustomizationArrayId.updates[0]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.updates[1]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.updates[1]}-list`).removeClass("hid-el")
                                   }
                               } else if(ele.hasClass("customization-label")) {
                                   if(ele.is(':checked')) {
@@ -592,10 +592,10 @@ function loadLibraries(index) {
                               } else {
                                   if(ele.is(':checked')) {
                                       currentSettings.updatesLabelHide = 1
-                                      $(`#${settingsCustomizationArrayId.updates[1]}`).hide()
+                                      $(`#${settingsCustomizationArrayId.updates[1]}`).addClass("hid-el")
                                   } else {
                                       currentSettings.updatesLabelHide = 0
-                                      $(`#${settingsCustomizationArrayId.updates[1]}`).show()
+                                      $(`#${settingsCustomizationArrayId.updates[1]}`).removeClass("hid-el")
                                   }
                               }
                               break;
@@ -604,15 +604,15 @@ function loadLibraries(index) {
                                   if(ele.is(':checked')) {
                                       currentSettings.updatedLinksFieldsHide = 1
                                       dev("12")
-                                      $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}-list`).hide()
+                                      $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}-list`).addClass("hid-el")
                                   } else {
                                     dev("13")
                                       currentSettings.updatedLinksFieldsHide = 0
-                                      $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).show()
-                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).show()
-                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}-list`).show()
+                                      $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}-list`).removeClass("hid-el")
                                   }
                               } else if(ele.hasClass("customization-label")) {
                                 dev("14")
@@ -628,10 +628,10 @@ function loadLibraries(index) {
                                 dev("15")
                                   if(ele.is(':checked')) {
                                       currentSettings.updatedLinksLabelHide = 1
-                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).hide()
+                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).addClass("hid-el")
                                   } else {
                                       currentSettings.updatedLinksLabelHide = 0
-                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).show()
+                                      $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).removeClass("hid-el")
                                   }
                               }
                               break;
@@ -639,14 +639,14 @@ function loadLibraries(index) {
                               if(ele.hasClass("rearm-field")) {
                                   if(ele.is(':checked')) {
                                       currentSettings.noteFieldsHide = 1
-                                      $(`#${settingsCustomizationArrayId.note[0]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.note[1]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.note[1]}-list`).hide()
+                                      $(`#${settingsCustomizationArrayId.note[0]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.note[1]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.note[1]}-list`).addClass("hid-el")
                                   } else {
                                       currentSettings.noteFieldsHide = 0
-                                      $(`#${settingsCustomizationArrayId.note[0]}`).show()
-                                      $(`#${settingsCustomizationArrayId.note[1]}`).show()
-                                      $(`#${settingsCustomizationArrayId.note[1]}-list`).show()
+                                      $(`#${settingsCustomizationArrayId.note[0]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.note[1]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.note[1]}-list`).removeClass("hid-el")
                                   }
                               } else if(ele.hasClass("customization-label")) {
                                   if(ele.is(':checked')) {
@@ -660,10 +660,10 @@ function loadLibraries(index) {
                               } else {
                                   if(ele.is(':checked')) {
                                       currentSettings.noteLabelHide = 1
-                                      $(`#${settingsCustomizationArrayId.note[1]}`).hide()
+                                      $(`#${settingsCustomizationArrayId.note[1]}`).addClass("hid-el")
                                   } else {
                                       currentSettings.noteLabelHide = 0
-                                      $(`#${settingsCustomizationArrayId.note[1]}`).show()
+                                      $(`#${settingsCustomizationArrayId.note[1]}`).removeClass("hid-el")
                                   }
                               }
                               break;
@@ -671,14 +671,14 @@ function loadLibraries(index) {
                               if(ele.hasClass("rearm-field")) {
                                   if(ele.is(':checked')) {
                                       currentSettings.rtFieldsHide = 1
-                                      $(`#${settingsCustomizationArrayId.rt[0]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.rt[1]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.rt[1]}-list`).hide()
+                                      $(`#${settingsCustomizationArrayId.rt[0]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.rt[1]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.rt[1]}-list`).addClass("hid-el")
                                   } else {
                                       currentSettings.rtFieldsHide = 0
-                                      $(`#${settingsCustomizationArrayId.rt[0]}`).show()
-                                      $(`#${settingsCustomizationArrayId.rt[1]}`).show()
-                                      $(`#${settingsCustomizationArrayId.rt[1]}-list`).show()
+                                      $(`#${settingsCustomizationArrayId.rt[0]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.rt[1]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.rt[1]}-list`).removeClass("hid-el")
                                   }
                               } else if(ele.hasClass("customization-label")) {
                                   if(ele.is(':checked')) {
@@ -692,10 +692,10 @@ function loadLibraries(index) {
                               } else {
                                   if(ele.is(':checked')) {
                                       currentSettings.rtLabelHide = 1
-                                      $(`#${settingsCustomizationArrayId.rt[1]}`).hide()
+                                      $(`#${settingsCustomizationArrayId.rt[1]}`).addClass("hid-el")
                                   } else {
                                       currentSettings.rtLabelHide = 0
-                                      $(`#${settingsCustomizationArrayId.rt[1]}`).show()
+                                      $(`#${settingsCustomizationArrayId.rt[1]}`).removeClass("hid-el")
                                   }
                               }
                               break;
@@ -703,14 +703,14 @@ function loadLibraries(index) {
                               if(ele.hasClass("rearm-field")) {
                                   if(ele.is(':checked')) {
                                       currentSettings.upsellFieldsHide = 1
-                                      $(`#${settingsCustomizationArrayId.upsell[0]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.upsell[1]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.upsell[1]}-list`).hide()
+                                      $(`#${settingsCustomizationArrayId.upsell[0]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.upsell[1]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.upsell[1]}-list`).addClass("hid-el")
                                   } else {
                                       currentSettings.upsellFieldsHide = 0
-                                      $(`#${settingsCustomizationArrayId.upsell[0]}`).show()
-                                      $(`#${settingsCustomizationArrayId.upsell[1]}`).show()
-                                      $(`#${settingsCustomizationArrayId.upsell[1]}-list`).show()
+                                      $(`#${settingsCustomizationArrayId.upsell[0]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.upsell[1]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.upsell[1]}-list`).removeClass("hid-el")
                                   }
                               } else if(ele.hasClass("customization-label")) {
                                   if(ele.is(':checked')) {
@@ -724,10 +724,10 @@ function loadLibraries(index) {
                               } else {
                                   if(ele.is(':checked')) {
                                       currentSettings.upsellLabelHide = 1
-                                      $(`#${settingsCustomizationArrayId.upsell[1]}`).hide()
+                                      $(`#${settingsCustomizationArrayId.upsell[1]}`).addClass("hid-el")
                                   } else {
                                       currentSettings.upsellLabelHide = 0
-                                      $(`#${settingsCustomizationArrayId.upsell[1]}`).show()
+                                      $(`#${settingsCustomizationArrayId.upsell[1]}`).removeClass("hid-el")
                                   }
                               }
                               break;
@@ -735,14 +735,14 @@ function loadLibraries(index) {
                               if(ele.hasClass("rearm-field")) {
                                   if(ele.is(':checked')) {
                                       currentSettings.referenceLinkFieldsHide = 1
-                                      $(`#${settingsCustomizationArrayId.referenceLink[0]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}-list`).hide()
+                                      $(`#${settingsCustomizationArrayId.referenceLink[0]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}-list`).addClass("hid-el")
                                   } else {
                                       currentSettings.referenceLinkFieldsHide = 0
-                                      $(`#${settingsCustomizationArrayId.referenceLink[0]}`).show()
-                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}`).show()
-                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}-list`).show()
+                                      $(`#${settingsCustomizationArrayId.referenceLink[0]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}-list`).removeClass("hid-el")
                                   }
                               } else if(ele.hasClass("customization-label")) {
                                   if(ele.is(':checked')) {
@@ -756,10 +756,10 @@ function loadLibraries(index) {
                               } else {
                                   if(ele.is(':checked')) {
                                       currentSettings.referenceLinkLabelHide = 1
-                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}`).hide()
+                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}`).addClass("hid-el")
                                   } else {
                                       currentSettings.referenceLinkLabelHide = 0
-                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}`).show()
+                                      $(`#${settingsCustomizationArrayId.referenceLink[1]}`).removeClass("hid-el")
                                   }
                               }
                               break;
@@ -767,12 +767,12 @@ function loadLibraries(index) {
                               if(ele.hasClass("rearm-field")) {
                                   if(ele.is(':checked')) {
                                       currentSettings.timeConsumedFieldsHide = 1
-                                      $(`#${settingsCustomizationArrayId.timeConsumed[0]}`).hide()
-                                      $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).hide()
+                                      $(`#${settingsCustomizationArrayId.timeConsumed[0]}`).addClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).addClass("hid-el")
                                   } else {
                                       currentSettings.timeConsumedFieldsHide = 0
-                                      $(`#${settingsCustomizationArrayId.timeConsumed[0]}`).show()
-                                      $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).show()
+                                      $(`#${settingsCustomizationArrayId.timeConsumed[0]}`).removeClass("hid-el")
+                                      $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).removeClass("hid-el")
                                   }
                               } else if(ele.hasClass("customization-label")) {
                                   if(ele.is(':checked')) {
@@ -786,10 +786,10 @@ function loadLibraries(index) {
                               } else {
                                   if(ele.is(':checked')) {
                                       currentSettings.timeConsumedLabelHide = 1
-                                      $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).hide()
+                                      $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).addClass("hid-el")
                                   } else {
                                       currentSettings.timeConsumedLabelHide = 0
-                                      $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).show()
+                                      $(`#${settingsCustomizationArrayId.timeConsumed[1]}`).removeClass("hid-el")
                                   }
                               }
                               break;
@@ -813,9 +813,9 @@ function loadLibraries(index) {
                                           $('select#role option').each(function() {
                                               var option = $(this)
                                               if(option.data("type") != valR && option.val() != "members") {
-                                                  option.hide();
+                                                  option.addClass("hid-el")
                                               } else {
-                                                  option.show();
+                                                  option.removeClass("hid-el")
                                               }
                                           });
                                       }
