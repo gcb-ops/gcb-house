@@ -441,7 +441,7 @@ function loadLibraries(index) {
               } else if(parent.attr("id") == "updated-links") { 
                 $(`#gcb-link-list`).html(currHtml);
               } else if(parent.attr("id") == "reference-links") { 
-                $(`#gcb-reference`).html(currHtml);
+                $(`#gcb-reference-list`).html(currHtml);
               } else {
                 $(`#gcb-${parent.attr("id")}-list`).html(currHtml);
               }
@@ -801,9 +801,10 @@ function loadLibraries(index) {
                               for (var i = 0; i < radios.length; i++) {
                                   if (radios[i].checked) {;
                                       var valR = radios[i].value;
+                                      console.log("currentSettings.currentRole: " + currentSettings.currentRole)
                                       if(currentSettings.currentRole != valR) {
                                           currentSettings.currentRole = valR;
-                                          console.log(valR)
+                                          console.log("valR: " + valR)
                                           if(valR == "Designer") {
                                               $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").addClass("hid-el")
                                               $("#gcb-upsells").parent().prev().addClass("hid-el")
