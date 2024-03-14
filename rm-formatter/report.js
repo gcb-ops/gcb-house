@@ -606,19 +606,16 @@ function loadLibraries(index) {
                               if(ele.hasClass("rearm-field")) {
                                   if(ele.is(':checked')) {
                                       currentSettings.updatedLinksFieldsHide = 1
-                                      dev("12")
                                       $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).addClass("hid-el")
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).addClass("hid-el")
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}-list`).addClass("hid-el")
                                   } else {
-                                    dev("13")
                                       currentSettings.updatedLinksFieldsHide = 0
                                       $(`#${settingsCustomizationArrayId.updatedLinks[0]}`).removeClass("hid-el")
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).removeClass("hid-el")
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}-list`).removeClass("hid-el")
                                   }
                               } else if(ele.hasClass("customization-label")) {
-                                dev("14")
                                   if(ele.is(':checked')) {
                                       text = $(`#${parent}`).find(".custom-text").val()
                                       currentSettings.updatedLinksFieldLabelText = text
@@ -801,11 +798,10 @@ function loadLibraries(index) {
                               for (var i = 0; i < radios.length; i++) {
                                   if (radios[i].checked) {;
                                       var valR = radios[i].value;
-                                      console.log("currentSettings.currentRole: " + currentSettings.currentRole)
                                       if(currentSettings.currentRole != valR) {
                                           currentSettings.currentRole = valR;
-                                          console.log("valR: " + valR)
                                           if(valR == "Designer") {
+                                          console.log("valR: " + valR)
                                               $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").addClass("hid-el")
                                               $("#gcb-upsells").parent().prev().addClass("hid-el")
                                               $("#gcb-reference").parent().prev().addClass("hid-el")
