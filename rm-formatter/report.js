@@ -625,7 +625,6 @@ function loadLibraries(index) {
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).text("Updated Links:")
                                   }
                               } else {
-                                dev("15")
                                   if(ele.is(':checked')) {
                                       currentSettings.updatedLinksLabelHide = 1
                                       $(`#${settingsCustomizationArrayId.updatedLinks[1]}`).addClass("hid-el")
@@ -798,27 +797,25 @@ function loadLibraries(index) {
                               for (var i = 0; i < radios.length; i++) {
                                   if (radios[i].checked) {;
                                       var valR = radios[i].value;
-                                      if(currentSettings.currentRole != valR) {
-                                          currentSettings.currentRole = valR;
-                                          if(valR == "Designer") {
-                                          console.log("valR: " + valR)
-                                              $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").addClass("hid-el")
-                                              $("#gcb-upsells").parent().prev().addClass("hid-el")
-                                              $("#gcb-reference").parent().prev().addClass("hid-el")
-                                          } else {
-                                              $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").removeClass("hid-el")
-                                          }
-                                          $("#gcb-role").text(valR + ": ");
-                                          $("select#role").find('option:first-child').prop('selected', true);
-                                          $('select#role option').each(function() {
-                                              var option = $(this)
-                                              if(option.data("type") != valR && option.val() != "members") {
-                                                  option.addClass("hid-el")
-                                              } else {
-                                                  option.removeClass("hid-el")
-                                              }
-                                          });
-                                      }
+                                      currentSettings.currentRole = valR;
+                                        if(valR == "Designer") {
+                                        console.log("valR: " + valR)
+                                            $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").addClass("hid-el")
+                                            $("#gcb-upsells").parent().prev().addClass("hid-el")
+                                            $("#gcb-reference").parent().prev().addClass("hid-el")
+                                        } else {
+                                            $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").removeClass("hid-el")
+                                        }
+                                        $("#gcb-role").text(valR + ": ");
+                                        $("select#role").find('option:first-child').prop('selected', true);
+                                        $('select#role option').each(function() {
+                                            var option = $(this)
+                                            if(option.data("type") != valR && option.val() != "members") {
+                                                option.addClass("hid-el")
+                                            } else {
+                                                option.removeClass("hid-el")
+                                            }
+                                        });
                                       break;
                                   }
                               }
