@@ -256,7 +256,7 @@ function loadLibraries(index) {
                                             <div>
                                                 <h3 class="text-white fs-5">${slideContent["title"]}</h3>
                                                 <p class="fs-6 text-white">${slideContent["desc"].substr(0, 160) + '...'}</p>
-                                                <i class="fa-solid fa-paw"></i>
+                                                <a href="${slideContent["url"]}"><i class="fa-solid fa-paw"></i></a>
                                             </div>
                                         </div>
                                     </div>
