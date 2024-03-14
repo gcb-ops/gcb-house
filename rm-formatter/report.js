@@ -799,10 +799,11 @@ function loadLibraries(index) {
                                       var valR = radios[i].value;
                                       currentSettings.currentRole = valR;
                                         if(valR == "Designer") {
-                                        console.log("valR: " + valR)
                                             $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").addClass("hid-el")
                                             $("#gcb-upsells").parent().prev().addClass("hid-el")
                                             $("#gcb-reference").parent().prev().addClass("hid-el")
+                                            $("#updated-links label").text("Updated Links");
+                                            $("#updated-links textarea").attr("placeholder", "Updated Links");
                                         } else {
                                             $("#upsell, #gcb-upsells, #gcb-upsells-list, #reference-links, #gcb-reference, #gcb-reference-list").removeClass("hid-el")
                                         }
