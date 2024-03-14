@@ -93,10 +93,10 @@ function loadLibraries(index) {
         }
 
         function slideTrigger(el) {
-        el.addClass('slick-anmt');
-        setTimeout(function() {
-            el.removeClass('slick-anmt');
-        }, 200);
+            el.addClass('slick-anmt');
+            setTimeout(function() {
+                el.removeClass('slick-anmt');
+            }, 200);
         }
 
         function shuffleArray(array) {
@@ -392,39 +392,44 @@ function loadLibraries(index) {
             var el = $(this);
             var slideTitle = el.find('span').text()
             
-            sheetReader(slideTitle)
-            .then(data => {
-                let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('portalModal')) 
-                let title = data[0],
-                    desc = data[3],
-                    bg = data[2],
-                    link = data[1]
+            if(el.parent().hasClass("slick-current")) {
+                sheetReader(slideTitle)
+                .then(data => {
+                    let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('portalModal')) 
+                    let title = data[0],
+                        desc = data[3],
+                        bg = data[2],
+                        link = data[1]
 
-                $(document).on('show.bs.modal', '#portalModal', () => { 
-                    $('.modal h2').text(title)
-                    $('.modal p').text(desc)
-                    $('.modal .col.mod-img').css('background', `url(${bg}) center/cover no-repeat`);
-                    
-                    $(document).on('mouseover', '#fprint-btn', function() {
-                    setTimeout(function() {
-                        $('.modal .btn').attr({href: link, target: '_blank'})
-                        window.open($('.slick-center .core').data("link"), '_blank');
-                    }, 1500)
+                    $(document).on('show.bs.modal', '#portalModal', () => { 
+                        $('.modal h2').text(title)
+                        $('.modal p').text(desc)
+                        $('.modal .col.mod-img').css('background', `url(${bg}) center/cover no-repeat`);
+                        
+                        $(document).on('mouseover', '#fprint-btn', function() {
+                        setTimeout(function() {
+                            $('.modal .btn').attr({href: link, target: '_blank'})
+                            window.open($('.slick-center .core').data("link"), '_blank');
+                        }, 1500)
+                        });
+                    }) 
+            
+                    modal.show();
+            
+                    $(document).on('hidden.bs.modal', '#portalModal', () => { 
+                        $('.modal h2, .modal p').text('')
+                        $('.modal .col.mod-img').css('background', `white`);
+                        $('.modal .btn').removeAttr('href target')
                     });
-                }) 
-        
-                modal.show();
-        
-                $(document).on('hidden.bs.modal', '#portalModal', () => { 
-                    $('.modal h2, .modal p').text('')
-                    $('.modal .col.mod-img').css('background', `white`);
-                    $('.modal .btn').removeAttr('href target')
+                })
+                .catch(error => {
+                // Handle errors if needed
+                console.error(error);
                 });
-            })
-            .catch(error => {
-            // Handle errors if needed
-            console.error(error);
-            });
+            } else {
+                var clickedIndex = el.parent().attr('data-slick-index');
+                $('.slick-gc').slick('slickGoTo', clickedIndex);
+            }
 
         });
 
