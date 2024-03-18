@@ -85,7 +85,7 @@ function loadLibraries(index) {
           const gcbSettingsGeneral = {
       
               "darkmode": 1,
-              "vidBG": 1,
+              "vidBG": 0,
       
           }
       

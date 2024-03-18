@@ -17,10 +17,7 @@
 }
 
 body {
-    background-image: url("https://s13.gifyu.com/images/SC5Nw.png");
-    background-size: 70%;
-    background-position: left center;
-    background-color: #eafaf9;
+    background-color: #dde1e7;
     overflow-x: hidden;
 }
 
@@ -452,7 +449,7 @@ body.dark--theme .gcb-body .gc-gen {
 }
 
 body.dark--theme #body {
-    background-color: rgba(13, 27, 42, 0.70);
+    background-color: rgb(13, 27, 42);
 }
 
 body.dark--theme .clipboard {
