@@ -395,8 +395,6 @@ function loadLibraries(index) {
               }
           });
       
-          $("#time-consumed-tt").on("keypress", function(e) { e.preventDefault() })
-      
           $(document).on("keydown", ".gc-dynamic-input textarea", function(e){
               
               var key = e.keyCode || e.charCode;
@@ -433,6 +431,9 @@ function loadLibraries(index) {
               let leadChar = parent.find("textarea").val() ? "- " : "";
       
               for(let i = 0; i < ctr; i++) {
+                if(parent.attr("id") == "reference-links") {
+                    leadChar = "";
+                }
                   currHtml += "<span>" + leadChar + parent.find("textarea").eq(i).val() + "</span><br />"
               }
 
